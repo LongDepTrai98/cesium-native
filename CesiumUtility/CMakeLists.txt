@@ -40,9 +40,9 @@ cesium_target_include_directories(
 
 target_link_libraries(
     CesiumUtility
-    PUBLIC
+    PRIVATE
         zlib-ng::zlib-ng
-        spdlog::spdlog
+        spdlog::spdlog_header_only
         glm::glm
         ada::ada
 )
