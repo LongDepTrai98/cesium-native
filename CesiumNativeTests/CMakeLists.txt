@@ -25,6 +25,7 @@ set(cesium_native_targets
     CesiumUtility
 )
 
+
 if(NOT CESIUM_DISABLE_CURL) 
     list(APPEND cesium_native_targets CesiumCurl)
 endif()
