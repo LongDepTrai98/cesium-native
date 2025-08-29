@@ -29,7 +29,7 @@ function(configure_cesium_library targetName)
     target_compile_definitions(
         ${targetName} 
         PUBLIC 
-            GLM_FORCE_INTRINSICS # Force SIMD code paths
+            #GLM_FORCE_INTRINSICS # Force SIMD code paths
             GLM_ENABLE_EXPERIMENTAL # Allow use of experimental extensions
     )
 
