@@ -1118,8 +1118,7 @@ void TilesetContentManager::loadTileContent(
   pLoader->loadTileContent(loadInput)
       .thenImmediately([tileLoadInfo = std::move(tileLoadInfo),
                         projections = std::move(projections),
-                        rendererOptions = tilesetOptions.rendererOptions,
-                        ptr_tile = pTile](
+                        rendererOptions = tilesetOptions.rendererOptions](
                         TileLoadResult&& result) mutable {
         // the reason we run immediate continuation, instead of in the
         // worker thread, is that the loader may run the task in the main
@@ -1128,7 +1127,6 @@ void TilesetContentManager::loadTileContent(
         // spawn another worker thread if the result of the task isn't
         // related to render content. We only ever spawn a new task in the
         // worker thread if the content is a render content
-        if(!rendererOptions.has_value()) rendererOptions = rendererOptions = ptr_tile; 
         if (result.state == TileLoadResultState::Success) {
           if (std::holds_alternative<CesiumGltf::Model>(result.contentKind)) {
             auto asyncSystem = tileLoadInfo.asyncSystem;
