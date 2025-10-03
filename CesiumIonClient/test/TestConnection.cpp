@@ -54,7 +54,7 @@ TEST_CASE("CesiumIonClient::Connection") {
   Connection connection(
       asyncSystem,
       pAssetAccessor,
-      "my access token",
+      "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiJmZDAyNWYzMi1mMjk4LTQ5NjEtYmUwMi1hNjc4MDcxOWFlNDQiLCJpZCI6MTc4MTMzLCJpYXQiOjE2OTk5NDU5Njd9.7K9lFmBsKk4H1tfTfn590iTEGcFGqOXsa25XO8LoXJ4",
       CesiumIonClient::ApplicationData(),
       "https://example.com/");
 

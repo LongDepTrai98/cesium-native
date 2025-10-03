@@ -688,6 +688,7 @@ postProcessContentInWorkerThread(
               tileLoadInfo.asyncSystem,
               std::move(result),
               tileLoadInfo.tileTransform,
+              tileLoadInfo.tileID,
               rendererOptions);
         } else {
           return tileLoadInfo.asyncSystem

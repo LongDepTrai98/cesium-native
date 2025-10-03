@@ -51,7 +51,7 @@ MyRasterOverlay::createTileProvider(
   CesiumUtility::IntrusivePointer<RasterOverlay> pUrlTemplate =
       new UrlTemplateRasterOverlay(
           this->getName(),
-          "https://example.com/level-{z}/column-{x}/row-{y}.png",
+          "https://api.mapbox.com/v4/mapbox.satellite/{z}/{x}/{y}@2x.png256?access_token=pk.eyJ1IjoiYW5odHVzeHl6IiwiYSI6ImNsdng4ZGp3ZTA2aDgyaWw3ZnM2NXJhcjcifQ.OV7YSJsVT8zY-L4tozXaVw",
           {},
           options);
 

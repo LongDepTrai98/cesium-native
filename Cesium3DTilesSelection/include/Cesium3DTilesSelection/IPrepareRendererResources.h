@@ -4,7 +4,7 @@
 #include <Cesium3DTilesSelection/TileLoadResult.h>
 #include <CesiumAsync/Future.h>
 #include <CesiumRasterOverlays/IPrepareRasterOverlayRendererResources.h>
-
+#include <Cesium3DTilesSelection/TileID.h>
 #include <glm/vec2.hpp>
 
 #include <any>
@@ -89,6 +89,7 @@ public:
       const CesiumAsync::AsyncSystem& asyncSystem,
       TileLoadResult&& tileLoadResult,
       const glm::dmat4& transform,
+      const TileID& tile,
       const std::any& rendererOptions) = 0;
 
   /**
