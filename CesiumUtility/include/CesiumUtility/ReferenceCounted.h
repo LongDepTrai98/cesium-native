@@ -50,7 +50,7 @@ template <typename T, bool isThreadSafe = true>
 class ReferenceCounted
 #ifndef NDEBUG
     : public ThreadIdHolder<isThreadSafe>
-#endif
+#endif 
 {
 public:
   ~ReferenceCounted() noexcept { CESIUM_ASSERT(this->_referenceCount == 0); }
